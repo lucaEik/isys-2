@@ -4,8 +4,6 @@ import weka.classifiers.trees.RandomForest;
 import weka.core.Attribute;
 import weka.core.DenseInstance;
 import weka.core.Instances;
-import weka.filters.Filter;
-import weka.filters.unsupervised.attribute.Normalize;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -19,7 +17,8 @@ import java.util.Random;
 
 public class Classifier  {
 
-    private int attrRange = 10;
+    private int avgHDiffRange = 105;
+    private int stsHDiffRange = 40;
 
     private double[][] data;
 
@@ -106,6 +105,63 @@ public class Classifier  {
         return Math.abs(data[obj.getRow()][obj.getCol()] - (avgHeight / counter));
     }
 
+    private double highestSTSDiff(DataObject obj, int range) {
+
+        ArrayList<DataObject> objects = new ArrayList<>();
+        double heightDiff = 0.0;
+
+        for (int row = -range; row <= range; row++) {
+            for (int col = -range; col <= range; col++) {
+                if (obj.getRow() + row >= 0 && obj.getCol() + col >= 0 && obj.getRow() + row < data.length && obj.getCol() + col < data[0].length) {
+                    objects.add(new DataObject(obj.getRow() + row, obj.getCol() + col));
+                }
+            }
+        }
+
+        for (DataObject object : objects) {
+            if (object.getRow() - 1 >= 0){
+                double diff = Math.abs(data[object.getRow()][object.getCol()] - data[object.getRow() - 1][object.getCol()]);
+                if (diff > heightDiff) {
+                    heightDiff = diff;
+                }
+            }
+            if (object.getRow() + 1 < data.length){
+                double diff = Math.abs(data[object.getRow()][object.getCol()] - data[object.getRow() + 1][object.getCol()]);
+                if (diff > heightDiff) {
+                    heightDiff = diff;
+                }
+            }
+            if (object.getCol() - 1 >= 0){
+                double diff = Math.abs(data[object.getRow()][object.getCol()] - data[object.getRow()][object.getCol() - 1]);
+                if (diff > heightDiff) {
+                    heightDiff = diff;
+                }
+            }
+            if (object.getCol() + 1 < data[0].length){
+                double diff = Math.abs(data[object.getRow()][object.getCol()] - data[object.getRow()][object.getCol() + 1]);
+                if (diff > heightDiff) {
+                    heightDiff = diff;
+                }
+            }
+        }
+
+        return heightDiff;
+    }
+
+    private double avgHDiff(DataObject obj, int range) {
+        double avgDiff = 0.0;
+        int count = 0;
+        for (int row = -range; row < range; row++) {
+            for (int col = -range; col < range; col++) {
+                if (obj.getRow() + row >= 0 && obj.getRow() + row < data.length && obj.getCol() + col >= 0 && obj.getCol() + col < data[0].length) {
+                    avgDiff += data[obj.getRow() + row][obj.getCol() + col];
+                    count++;
+                }
+            }
+        }
+        return Math.abs(data[obj.getRow()][obj.getCol()] - avgDiff / count);
+    }
+
     /*
     private double rise(DataObject obj, int range) {
         // TODO fix the "out of range problem"
@@ -130,12 +186,14 @@ public class Classifier  {
 
         // height differences
         int bothLen = aObjects.length + bObjects.length;
-        double[][] values = new double[bothLen][1];
+        double[][] values = new double[bothLen][2];
         for (int i = 0; i < aObjects.length; i++) {
-            values[i][0] = avgHeightDifference(aObjects[i], attrRange);
+            values[i][0] = avgHDiff(aObjects[i], avgHDiffRange);
+            values[i][1] = highestSTSDiff(aObjects[i], stsHDiffRange);
         }
         for (int i = aObjects.length; i < bothLen; i++) {
-            values[i][0] = avgHeightDifference(bObjects[i - aObjects.length], attrRange);
+            values[i][0] = avgHDiff(bObjects[i - aObjects.length], avgHDiffRange);
+            values[i][1] = highestSTSDiff(bObjects[i - aObjects.length], stsHDiffRange);
         }
 
         // classes
@@ -146,6 +204,7 @@ public class Classifier  {
         // add attribute names
         ArrayList<Attribute> attributes = new ArrayList<>();
         attributes.add(new Attribute("avgHeightDiff"));
+        attributes.add(new Attribute("highestSTSDiff"));
 
 
         // create instances with attributes etc.
@@ -172,7 +231,7 @@ public class Classifier  {
         // set class index to target attribute (last attribute of the Instances)
         dataRaw.setClassIndex(dataRaw.numAttributes() - 1);
 
-        dataRaw.randomize(new Random(1));
+        dataRaw.randomize(new Random());
 
         int trainSize = (int) Math.round(dataRaw.numInstances() * 0.8);
         int testSize = dataRaw.numInstances() - trainSize;
@@ -187,14 +246,14 @@ public class Classifier  {
         RandomForest clf = new RandomForest();
         clf.buildClassifier(trainData);
 
-        eval.crossValidateModel(clf, testData, folds, new Random(1));
+        eval.crossValidateModel(clf, testData, folds, new Random());
 
         System.out.println(eval.toMatrixString());
         System.out.println(eval.toSummaryString("\nResults\n========\n", false));
-        System.out.println("Results for B");
+        System.out.println("Results for A");
         System.out.println("precision= " + eval.precision(0));
         System.out.println("recall= " + eval.recall(0));
-        System.out.println("Results for A");
+        System.out.println("Results for B");
         System.out.println("precision= " + eval.precision(1));
         System.out.println("recall= " + eval.recall(1));
 
@@ -305,8 +364,8 @@ public class Classifier  {
         DataObject[] objects = readObjects(objectsPath);
         double[][] values = new double[objects.length][2];
         for (int i = 0; i < objects.length; i++) {
-            values[i][0] = avgHeightDifference(objects[i], attrRange);
-            //values[i][1] = rise(objects[i], attrRange);
+            values[i][0] = avgHeightDifference(objects[i], avgHDiffRange);
+            values[i][1] = highestSTSDiff(objects[i], stsHDiffRange);
         }
         List<String> targets = new ArrayList<>();
         targets.add("A");

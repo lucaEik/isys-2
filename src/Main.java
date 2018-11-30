@@ -1,45 +1,26 @@
-import org.apache.commons.lang.ArrayUtils;
-import weka.classifiers.Evaluation;
-import weka.core.DenseInstance;
-import weka.core.Instances;
 
 import java.io.IOException;
 import java.util.*;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.List;
-
-import weka.core.converters.CSVLoader;
-import weka.core.Attribute;
-import weka.classifiers.trees.RandomForest;
-import weka.core.Instance;
-import weka.filters.Filter;
-import weka.filters.unsupervised.attribute.NumericToNominal;
-import weka.filters.unsupervised.attribute.Normalize;
-import weka.filters.unsupervised.attribute.Add;
-import weka.core.Debug;
-import weka.filters.supervised.attribute.AttributeSelection;
 
 public class Main {
 
     public static void main(String args[]) throws IOException, Exception {
 
-        Classifier c = new Classifier("data/data.csv");
-        c.trainNew("data/A0.csv", "data/B0.csv");
+        Classifier c = new Classifier("C:\\Users\\Luca\\Desktop\\data\\data.csv");
+        c.trainNew("C:\\Users\\Luca\\Desktop\\data\\A0.csv", "C:\\Users\\Luca\\Desktop\\data\\B0.csv");
 
-        /*
+
         System.out.println("Results A1: ");
-        Map<String, List<DataObject>> results = c.classify("data/A1.csv");
+        Map<String, List<DataObject>> results = c.classify("C:\\Users\\Luca\\Desktop\\data\\A1.csv");
         System.out.println("A: " + results.get("A").size());
         System.out.println("B: " + results.get("B").size());
 
         System.out.println("Results B1:");
-        results = c.classify("data/B1.csv");
+        results = c.classify("C:\\Users\\Luca\\Desktop\\data\\B1.csv");
         System.out.println("A: " + results.get("A").size());
         System.out.println("B: " + results.get("B").size());
-        */
+
         /*
 
         String data = System.getProperty("user.dir") + "/data/data.csv";
