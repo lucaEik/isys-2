@@ -25,23 +25,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Classifier.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Classifier.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Classifier.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1496">
-              <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+            <state relative-caret-position="287">
+              <caret line="156" selection-start-line="156" selection-end-line="168" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#nearestKNeighbours#0;class#Classifier#0" />
+                <element signature="method#avgHeightDifference#0;class#Classifier#0" />
+                <element signature="method#highestSTSDiff#0;class#Classifier#0" />
+                <element signature="method#variance#0;class#Classifier#0" />
+                <element signature="method#rise#0;class#Classifier#0" />
+                <element signature="method#symmetry#0;class#Classifier#0" />
+                <element signature="method#highestOverallDiff#0;class#Classifier#0" />
+                <element signature="method#classify#0;class#Classifier#0" />
+                <element signature="method#printObject#0;class#Classifier#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataObject.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DataObject.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/DataObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+            <state>
+              <caret selection-end-line="19" />
             </state>
           </provider>
         </entry>
@@ -49,8 +58,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1418">
-              <caret lean-forward="true" />
+            <state relative-caret-position="-153">
+              <caret line="12" column="101" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="101" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -75,7 +84,9 @@
       <find>bs</find>
       <find>avgHeightDiff(</find>
       <find>ran</find>
+      <find>normal</find>
       <find>random</find>
+      <find>new double</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -126,7 +137,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/commons-lang-2.6.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -227,7 +238,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1176" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="0" />
@@ -237,14 +248,14 @@
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="1" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="bottom" id="Event Log" order="3" sideWeight="0.0804904" side_tool="true" visible="true" weight="0.37186897" />
+      <window_info anchor="bottom" id="Event Log" order="3" sideWeight="0.0804904" side_tool="true" visible="true" weight="0.39884394" />
       <window_info anchor="right" id="Maven Projects" order="4" />
       <window_info anchor="bottom" id="Version Control" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="7" sideWeight="0.9195096" visible="true" weight="0.37186897" />
+      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.9195096" weight="0.39884394" />
       <window_info anchor="bottom" id="Terminal" order="4" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="0" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.18017058" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.18017058" />
       <window_info anchor="bottom" id="Find" order="6" />
       <window_info anchor="bottom" id="ANTLR Preview" order="2" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
@@ -265,7 +276,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -299,6 +310,15 @@
           <caret line="213" lean-forward="true" selection-start-line="213" selection-end-line="213" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#nearestKNeighbours#0;class#Classifier#0" />
+            <element signature="method#avgHeightDifference#0;class#Classifier#0" />
+            <element signature="method#highestSTSDiff#0;class#Classifier#0" />
+            <element signature="method#variance#0;class#Classifier#0" />
+            <element signature="method#rise#0;class#Classifier#0" />
+            <element signature="method#symmetry#0;class#Classifier#0" />
+            <element signature="method#highestOverallDiff#0;class#Classifier#0" />
+            <element signature="method#classify#0;class#Classifier#0" />
+            <element signature="method#printObject#0;class#Classifier#0" />
           </folding>
         </state>
       </provider>
@@ -319,6 +339,15 @@
           <caret line="90" column="33" lean-forward="true" selection-start-line="90" selection-start-column="33" selection-end-line="90" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#nearestKNeighbours#0;class#Classifier#0" />
+            <element signature="method#avgHeightDifference#0;class#Classifier#0" />
+            <element signature="method#highestSTSDiff#0;class#Classifier#0" />
+            <element signature="method#variance#0;class#Classifier#0" />
+            <element signature="method#rise#0;class#Classifier#0" />
+            <element signature="method#symmetry#0;class#Classifier#0" />
+            <element signature="method#highestOverallDiff#0;class#Classifier#0" />
+            <element signature="method#classify#0;class#Classifier#0" />
+            <element signature="method#printObject#0;class#Classifier#0" />
           </folding>
         </state>
       </provider>
@@ -353,6 +382,15 @@
           <caret line="89" column="54" selection-start-line="89" selection-start-column="54" selection-end-line="89" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#nearestKNeighbours#0;class#Classifier#0" />
+            <element signature="method#avgHeightDifference#0;class#Classifier#0" />
+            <element signature="method#highestSTSDiff#0;class#Classifier#0" />
+            <element signature="method#variance#0;class#Classifier#0" />
+            <element signature="method#rise#0;class#Classifier#0" />
+            <element signature="method#symmetry#0;class#Classifier#0" />
+            <element signature="method#highestOverallDiff#0;class#Classifier#0" />
+            <element signature="method#classify#0;class#Classifier#0" />
+            <element signature="method#printObject#0;class#Classifier#0" />
           </folding>
         </state>
       </provider>
@@ -373,6 +411,15 @@
           <caret line="11" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#nearestKNeighbours#0;class#Classifier#0" />
+            <element signature="method#avgHeightDifference#0;class#Classifier#0" />
+            <element signature="method#highestSTSDiff#0;class#Classifier#0" />
+            <element signature="method#variance#0;class#Classifier#0" />
+            <element signature="method#rise#0;class#Classifier#0" />
+            <element signature="method#symmetry#0;class#Classifier#0" />
+            <element signature="method#highestOverallDiff#0;class#Classifier#0" />
+            <element signature="method#classify#0;class#Classifier#0" />
+            <element signature="method#printObject#0;class#Classifier#0" />
           </folding>
         </state>
       </provider>
@@ -400,6 +447,15 @@
           <caret line="11" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#nearestKNeighbours#0;class#Classifier#0" />
+            <element signature="method#avgHeightDifference#0;class#Classifier#0" />
+            <element signature="method#highestSTSDiff#0;class#Classifier#0" />
+            <element signature="method#variance#0;class#Classifier#0" />
+            <element signature="method#rise#0;class#Classifier#0" />
+            <element signature="method#symmetry#0;class#Classifier#0" />
+            <element signature="method#highestOverallDiff#0;class#Classifier#0" />
+            <element signature="method#classify#0;class#Classifier#0" />
+            <element signature="method#printObject#0;class#Classifier#0" />
           </folding>
         </state>
       </provider>
@@ -434,6 +490,15 @@
           <caret line="70" column="33" selection-start-line="70" selection-end-line="71" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#nearestKNeighbours#0;class#Classifier#0" />
+            <element signature="method#avgHeightDifference#0;class#Classifier#0" />
+            <element signature="method#highestSTSDiff#0;class#Classifier#0" />
+            <element signature="method#variance#0;class#Classifier#0" />
+            <element signature="method#rise#0;class#Classifier#0" />
+            <element signature="method#symmetry#0;class#Classifier#0" />
+            <element signature="method#highestOverallDiff#0;class#Classifier#0" />
+            <element signature="method#classify#0;class#Classifier#0" />
+            <element signature="method#printObject#0;class#Classifier#0" />
           </folding>
         </state>
       </provider>
@@ -451,6 +516,15 @@
           <caret line="76" column="47" selection-start-line="76" selection-start-column="47" selection-end-line="76" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#nearestKNeighbours#0;class#Classifier#0" />
+            <element signature="method#avgHeightDifference#0;class#Classifier#0" />
+            <element signature="method#highestSTSDiff#0;class#Classifier#0" />
+            <element signature="method#variance#0;class#Classifier#0" />
+            <element signature="method#rise#0;class#Classifier#0" />
+            <element signature="method#symmetry#0;class#Classifier#0" />
+            <element signature="method#highestOverallDiff#0;class#Classifier#0" />
+            <element signature="method#classify#0;class#Classifier#0" />
+            <element signature="method#printObject#0;class#Classifier#0" />
           </folding>
         </state>
       </provider>
@@ -475,6 +549,15 @@
           <caret line="76" column="47" selection-start-line="76" selection-start-column="47" selection-end-line="76" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#nearestKNeighbours#0;class#Classifier#0" />
+            <element signature="method#avgHeightDifference#0;class#Classifier#0" />
+            <element signature="method#highestSTSDiff#0;class#Classifier#0" />
+            <element signature="method#variance#0;class#Classifier#0" />
+            <element signature="method#rise#0;class#Classifier#0" />
+            <element signature="method#symmetry#0;class#Classifier#0" />
+            <element signature="method#highestOverallDiff#0;class#Classifier#0" />
+            <element signature="method#classify#0;class#Classifier#0" />
+            <element signature="method#printObject#0;class#Classifier#0" />
           </folding>
         </state>
       </provider>
@@ -499,6 +582,15 @@
           <caret line="19" column="70" selection-start-line="19" selection-start-column="70" selection-end-line="19" selection-end-column="70" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#nearestKNeighbours#0;class#Classifier#0" />
+            <element signature="method#avgHeightDifference#0;class#Classifier#0" />
+            <element signature="method#highestSTSDiff#0;class#Classifier#0" />
+            <element signature="method#variance#0;class#Classifier#0" />
+            <element signature="method#rise#0;class#Classifier#0" />
+            <element signature="method#symmetry#0;class#Classifier#0" />
+            <element signature="method#highestOverallDiff#0;class#Classifier#0" />
+            <element signature="method#classify#0;class#Classifier#0" />
+            <element signature="method#printObject#0;class#Classifier#0" />
           </folding>
         </state>
       </provider>
@@ -547,6 +639,15 @@
           <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#nearestKNeighbours#0;class#Classifier#0" />
+            <element signature="method#avgHeightDifference#0;class#Classifier#0" />
+            <element signature="method#highestSTSDiff#0;class#Classifier#0" />
+            <element signature="method#variance#0;class#Classifier#0" />
+            <element signature="method#rise#0;class#Classifier#0" />
+            <element signature="method#symmetry#0;class#Classifier#0" />
+            <element signature="method#highestOverallDiff#0;class#Classifier#0" />
+            <element signature="method#classify#0;class#Classifier#0" />
+            <element signature="method#printObject#0;class#Classifier#0" />
           </folding>
         </state>
       </provider>
@@ -574,6 +675,15 @@
           <caret line="70" column="33" selection-start-line="70" selection-end-line="71" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#nearestKNeighbours#0;class#Classifier#0" />
+            <element signature="method#avgHeightDifference#0;class#Classifier#0" />
+            <element signature="method#highestSTSDiff#0;class#Classifier#0" />
+            <element signature="method#variance#0;class#Classifier#0" />
+            <element signature="method#rise#0;class#Classifier#0" />
+            <element signature="method#symmetry#0;class#Classifier#0" />
+            <element signature="method#highestOverallDiff#0;class#Classifier#0" />
+            <element signature="method#classify#0;class#Classifier#0" />
+            <element signature="method#printObject#0;class#Classifier#0" />
           </folding>
         </state>
       </provider>
@@ -591,6 +701,15 @@
           <caret line="76" column="47" selection-start-line="76" selection-start-column="47" selection-end-line="76" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#nearestKNeighbours#0;class#Classifier#0" />
+            <element signature="method#avgHeightDifference#0;class#Classifier#0" />
+            <element signature="method#highestSTSDiff#0;class#Classifier#0" />
+            <element signature="method#variance#0;class#Classifier#0" />
+            <element signature="method#rise#0;class#Classifier#0" />
+            <element signature="method#symmetry#0;class#Classifier#0" />
+            <element signature="method#highestOverallDiff#0;class#Classifier#0" />
+            <element signature="method#classify#0;class#Classifier#0" />
+            <element signature="method#printObject#0;class#Classifier#0" />
           </folding>
         </state>
       </provider>
@@ -615,6 +734,15 @@
           <caret line="76" column="47" selection-start-line="76" selection-start-column="47" selection-end-line="76" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#nearestKNeighbours#0;class#Classifier#0" />
+            <element signature="method#avgHeightDifference#0;class#Classifier#0" />
+            <element signature="method#highestSTSDiff#0;class#Classifier#0" />
+            <element signature="method#variance#0;class#Classifier#0" />
+            <element signature="method#rise#0;class#Classifier#0" />
+            <element signature="method#symmetry#0;class#Classifier#0" />
+            <element signature="method#highestOverallDiff#0;class#Classifier#0" />
+            <element signature="method#classify#0;class#Classifier#0" />
+            <element signature="method#printObject#0;class#Classifier#0" />
           </folding>
         </state>
       </provider>
@@ -639,6 +767,15 @@
           <caret line="19" column="70" selection-start-line="19" selection-start-column="70" selection-end-line="19" selection-end-column="70" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#nearestKNeighbours#0;class#Classifier#0" />
+            <element signature="method#avgHeightDifference#0;class#Classifier#0" />
+            <element signature="method#highestSTSDiff#0;class#Classifier#0" />
+            <element signature="method#variance#0;class#Classifier#0" />
+            <element signature="method#rise#0;class#Classifier#0" />
+            <element signature="method#symmetry#0;class#Classifier#0" />
+            <element signature="method#highestOverallDiff#0;class#Classifier#0" />
+            <element signature="method#classify#0;class#Classifier#0" />
+            <element signature="method#printObject#0;class#Classifier#0" />
           </folding>
         </state>
       </provider>
@@ -671,10 +808,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Classifier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="156" selection-start-line="156" selection-end-line="168" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#nearestKNeighbours#0;class#Classifier#0" />
+            <element signature="method#avgHeightDifference#0;class#Classifier#0" />
+            <element signature="method#highestSTSDiff#0;class#Classifier#0" />
+            <element signature="method#variance#0;class#Classifier#0" />
+            <element signature="method#rise#0;class#Classifier#0" />
+            <element signature="method#symmetry#0;class#Classifier#0" />
+            <element signature="method#highestOverallDiff#0;class#Classifier#0" />
+            <element signature="method#classify#0;class#Classifier#0" />
+            <element signature="method#printObject#0;class#Classifier#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1418">
-          <caret lean-forward="true" />
+        <state relative-caret-position="-153">
+          <caret line="12" column="101" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="101" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -683,18 +839,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DataObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Classifier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1496">
-          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state>
+          <caret selection-end-line="19" />
         </state>
       </provider>
     </entry>
@@ -755,7 +901,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
